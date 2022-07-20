@@ -103,7 +103,7 @@ for i in xlist:
 # create two directories , you usually use a field with higher
 # cardinality , outside of that it default to the hdfs block size
 # and will split files greater than that isze
-nextgen_set.write.option("header",True).partitionBy("state") .mode("overwrite") .csv("/tmp/finalset")
+nextgen_set.write.partitionBy("ng('e_1','n_1'") .mode("overwrite") .csv("/tmp/finalset")
 
 
 
